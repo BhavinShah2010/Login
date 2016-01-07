@@ -10,6 +10,7 @@ class userController {
 	public function __construct () {
 		$this->DAOObj = new userDAOImplementation("users");
 	}
+	/*This function will save the user details to the DB*/
 
 	public function save($authId,$fname,$lname,$authProvider,$emailId,$profilePicLink) {
 			
@@ -19,6 +20,8 @@ class userController {
 			return $this->user;	
 		
 		}
+
+		/*This function will give the user details*/
 	
 	public function getUser($authId,$fname,$lname,$authProvider,$emailId,$profilePicLink) {
 			

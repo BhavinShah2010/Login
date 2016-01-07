@@ -20,7 +20,7 @@ class userDAOImplementation implements userDAO {
 		
 			}
 		
-		//check if user is already member or not	
+		//check if user is already a member or not	
 		public function getUser ($userObj) {
 				$query = mysqli_query($this->connectionObj,"SELECT * FROM $this->tableName WHERE authProvider = '".$userObj->getauthProvider()."' AND authId = '".$userObj->getauthID()."'") or die(mysqli_error($this->connectionObj));
 				
